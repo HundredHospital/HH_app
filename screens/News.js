@@ -17,7 +17,6 @@ export default function App() {
       });
       const newResJson = res.data; 
       setdata(newResJson)
-      // console.log(res.data)
     };
     getData()
   },[]);
@@ -51,7 +50,6 @@ export default function App() {
     </View>
     <ScrollView>
     {Data.map((news, index) => ( //TouchableOpacity : 해당 컴포넌트안에 감싸져 있는 컴포넌트에 터치 이벤트를 추가해주는 컴포넌트
-    console.log(news.title),
     <TouchableOpacity key={index} style={styles.productContainer} onPress={() => handleProductPress(news.title)}>
       <Text style={styles.productName}>{news.title}</Text>
     </TouchableOpacity>
